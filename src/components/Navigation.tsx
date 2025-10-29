@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/baithack-logo.jpeg";
+import logo from "@/assets/Baithack-logo.svg";
 
 const navItems = [
   { name: "Home", href: "#hero" },
