@@ -48,6 +48,25 @@ const galleryImages = [
   },
 ];
 
+// ✨ New Reviews Data
+const reviews = [
+  {
+    name: "Ananya Sharma",
+    rating: 5,
+    text: "Absolutely loved the rose chai! The ambience is calm and cozy — perfect for evenings.",
+  },
+  {
+    name: "Rohan Mehta",
+    rating: 4,
+    text: "The bun maska brought back Irani café vibes. Great service and tasty food.",
+  },
+  {
+    name: "Sneha Patel",
+    rating: 5,
+    text: "Baithack is my go-to spot for kulhad chai with friends. Feels like home!",
+  },
+];
+
 export const GallerySection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -143,6 +162,44 @@ export const GallerySection = () => {
             ))}
           </div>
         </div>
+
+        {/* ✨ Customer Reviews Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-20 text-center"
+        >
+          <h3 className="text-3xl font-bold font-playfair mb-8 text-primary">
+            What Our Customers Say
+          </h3>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {reviews.map((review, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-lg"
+              >
+                <p className="text-lg italic text-muted-foreground mb-4">
+                  "{review.text}"
+                </p>
+                <div className="flex justify-center mb-2">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-xl">
+                      ★
+                    </span>
+                  ))}
+                </div>
+                <p className="font-semibold text-white">{review.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -17,7 +17,7 @@ export const HeroSection = () => {
           alt="Café Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-secondary/80" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/60 to-secondary/50" />
       </div>
 
       {/* Animated Background Elements */}
