@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Facebook, Phone, Mail, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/baithack-logo.jpeg";
+import logo from "@/assets/Baithack-logo.svg";
 
 export const Footer = () => {
   const scrollToTop = () => {

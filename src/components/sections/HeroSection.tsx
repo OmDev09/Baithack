@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Coffee, MapPin } from "lucide-react";
-import logo from "@/assets/baithack-logo.jpeg";
+import logo from "@/assets/Baithack-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export const HeroSection = () => {
