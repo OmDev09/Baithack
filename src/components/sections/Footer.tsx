@@ -67,7 +67,7 @@ export const Footer = () => {
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="h-5 w-5" />
-                <span>+91 98765 43210</span>
+                <span>+91 89716 81974</span>
               </a>
               <a
                 href="mailto:hello@baithackcafe.com"
@@ -84,7 +84,7 @@ export const Footer = () => {
                 variant="outline"
                 size="icon"
                 className="hover:bg-primary hover:text-primary-foreground hover:border-primary"
-                onClick={() => window.open("https://instagram.com", "_blank")}
+                onClick={() => window.open("https://www.instagram.com/baithack_dombivliwest/", "_blank")}
               >
                 <Instagram className="h-5 w-5" />
               </Button>

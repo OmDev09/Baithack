@@ -3,12 +3,49 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cafeInterior from "@/assets/cafe-interior.webp";
-import menuBoard from "@/assets/menu-board.webp";
+import bunmaska from "@/assets/bunmaska.webp";
+import pizza from "@/assets/pizza.webp";
+import sandwich from "@/assets/sandwich.avif";
+import momos from "@/assets/momos.webp";
+import fries from "@/assets/fries.webp";
+import rose from "@/assets/rose.avif";
 
 const galleryImages = [
-  { src: cafeInterior, alt: "Baithack Café Interior", caption: "Our cozy café space" },
-  { src: menuBoard, alt: "Baithack Menu Board", caption: "Our delicious menu" },
-  { src: cafeInterior, alt: "Café Ambience", caption: "Perfect spot to relax" },
+  {
+    src: cafeInterior,
+    alt: "Baithack Café Interior",
+    caption: "Our cozy café space",
+  },
+  {
+    src: bunmaska,
+    alt: "Bun Maska",
+    caption: "Classic Irani café treat with butter and chai",
+  },
+  {
+    src: pizza,
+    alt: "Veg Pizza",
+    caption: "Cheesy delight loaded with fresh veggies",
+  },
+  {
+    src: sandwich,
+    alt: "Veg Grilled Sandwich",
+    caption: "Crispy, golden and stuffed with goodness",
+  },
+  {
+    src: momos,
+    alt: "Veg Momos",
+    caption: "Steamed perfection with spicy chutney",
+  },
+  {
+    src: fries,
+    alt: "Salted Fries",
+    caption: "Crispy, golden fries for every craving",
+  },
+  {
+    src: rose,
+    alt: "Rose Chai",
+    caption: "Aromatic rose-infused tea for a soothing sip",
+  },
 ];
 
 export const GallerySection = () => {
@@ -17,7 +54,7 @@ export const GallerySection = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
@@ -26,11 +63,16 @@ export const GallerySection = () => {
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + galleryImages.length) % galleryImages.length
+    );
   };
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-b from-secondary/30 to-background">
+    <section
+      id="gallery"
+      className="py-20 bg-gradient-to-b from-secondary/30 to-background"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +84,9 @@ export const GallerySection = () => {
           <h2 className="text-4xl md:text-5xl font-bold font-playfair mb-4 text-primary">
             Gallery
           </h2>
-          <p className="text-lg text-muted-foreground">A Glimpse of Our Space</p>
+          <p className="text-lg text-muted-foreground">
+            A Glimpse of Our Space
+          </p>
         </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
@@ -72,17 +116,18 @@ export const GallerySection = () => {
             variant="ghost"
             size="icon"
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent hover:bg-transparent rounded-full"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-10 w-10 text-white opacity-70 hover:opacity-100 transition" />
           </Button>
+
           <Button
             variant="ghost"
             size="icon"
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-transparent hover:bg-transparent rounded-full"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-10 w-10 text-white opacity-70 hover:opacity-100 transition" />
           </Button>
 
           {/* Dots Indicator */}

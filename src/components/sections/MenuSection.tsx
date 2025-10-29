@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Coffee, Cookie, CupSoda, Flame, Leaf, Milk, Pizza, Sandwich, Sparkles, Utensils } from "lucide-react";
+import { Coffee, CoffeeIcon, Cookie, CupSoda, Flame, Leaf, LucideCoffee, Milk, Pizza, Sandwich, Sparkles, Utensils } from "lucide-react";
 
 const menuData = {
   chai: [
@@ -10,11 +10,12 @@ const menuData = {
     { name: "Adrak Chai", price: "₹12/₹20", description: "Ginger-infused tea" },
     { name: "Elaichi Chai", price: "₹12/₹20", description: "Cardamom tea" },
     { name: "Pudina Chai", price: "₹12/₹20", description: "Mint flavored tea" },
-    { name: "pan Chai", price: "₹15/₹25", description: "Frothy tea" },
+    { name: "Pan Chai", price: "₹15/₹25", description: "Frothy tea" },
     { name: "Rose Chai", price: "₹15/₹25", description: "Rose-infused tea" },
     { name: "Masala Chai", price: "₹20/₹30", description: "Spiced tea blend" },
     { name: "Ukala", price: "₹20/₹25", description: "Special blend" },
     { name: "Kulhad Chai", price: "Extra ₹5", description: "Served in earthen cup" },
+    
   ],
   tea: [
     { name: "Black Tea", price: "₹15", description: "Pure black tea" },
@@ -97,7 +98,7 @@ export const MenuSection = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
           <TabsList className="flex justify-evenly md:flex-nowrap overflow-x-auto whitespace-nowrap gap-2 mb-8 bg-secondary/50 px-2 scrollbar-hide">
             <TabsTrigger value="chai" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <CupSoda className="mr-2 h-4 w-4" />
+              <LucideCoffee className="mr-2 h-4 w-4" />
               Chai
             </TabsTrigger>
             <TabsTrigger value="tea" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">

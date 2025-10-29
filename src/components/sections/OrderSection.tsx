@@ -6,17 +6,17 @@ const orderPlatforms = [
   {
     name: "Zomato",
     color: "bg-red-500 hover:bg-red-600",
-    link: "https://www.zomato.com",
+    link: "https://www.zomato.com/mumbai/baithack-taste-of-kulhad-dombivali-west-thane/order",
   },
   {
     name: "Swiggy",
     color: "bg-orange-500 hover:bg-orange-600",
-    link: "https://www.swiggy.com",
+    link: "https://www.swiggy.com/city/mumbai/baithack-taste-of-kulhad-dombivli-west-dombivli-rest1082192?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder",
   },
   {
     name: "MagicPin",
     color: "bg-purple-500 hover:bg-purple-600",
-    link: "https://www.magicpin.in",
+    link: "https://magicpin.in/profilemerchant?userId=55381307&searchQuery=Baithack+Taste+of+Kulhad+Dombivali+West&suggestionType=MERCHANTNAME&utm_source=search&utm_medium=suggester&utm_campaign=$suggester&utm_term=Baithack+Taste+of+Kulhad+Dombivali+West&enableYSF=false&tabType=delivery&filter=order_online",
   },
 ];
 
